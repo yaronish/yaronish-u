@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MatchThemAssets\Script\Main.cs">
+    <Files>
+      <File FileName="Assets\MatchThemAssets\Script\Main.cs" Line="207" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\yonischenko\work\Work\Unity\CommonProject\Assets\MatchThemAssets\Script\Main.cs" line="212" />
+      <Breakpoint file="C:\Users\yonischenko\work\Work\Unity\CommonProject\Assets\MatchThemAssets\Script\Main.cs" line="220" />
+      <Breakpoint file="C:\Users\yonischenko\work\Work\Unity\CommonProject\Assets\MatchThemAssets\Script\Main.cs" line="200" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
