@@ -59,51 +59,69 @@ public class Main : MonoBehaviour
     
     void Update ()
     {
+        processClick();
+        processMatches();
+    }
+
+    private void processClick()
+    {
         bool shouldTransit = false;
-        if (Input.GetButtonDown ("Fire1") && HOTween.GetTweenInfos () == null) {
-            Destroy (currentIndicator);
-            RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Vector2.zero);
-            if (hit.transform != null) {  
+        if (Input.GetButtonDown("Fire1") && HOTween.GetTweenInfos() == null)
+        {
+            Destroy(currentIndicator);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if (hit.transform != null)
+            {
                 if (firstObject == null)
                     firstObject = hit.transform.gameObject;
-                else {
+                else
+                {
                     secondObject = hit.transform.gameObject;
                     shouldTransit = true;
                 }
 
                 currentIndicator = GameObject.Instantiate(
-                    indicator, new Vector3 (
-                        hit.transform.gameObject.transform.position.x, 
-                        hit.transform.gameObject.transform.position.y, 
+                    indicator, new Vector3(
+                        hit.transform.gameObject.transform.position.x,
+                        hit.transform.gameObject.transform.position.y,
                         -1
                     ), transform.rotation
                 ) as GameObject;
-                
-                if (shouldTransit) {
+
+                if (shouldTransit)
+                {
                     var distance = firstObject.transform.position - secondObject.transform.position;
-                    
-                    if (Mathf.Abs (distance.x) <= 1 && Mathf.Abs (distance.y) <= 1) {   
-                        if (!canTransitDiagonally) {
-                            if (distance.x != 0 && distance.y != 0) {
-                                Destroy (currentIndicator); 
+
+                    if (Mathf.Abs(distance.x) <= 1 && Mathf.Abs(distance.y) <= 1)
+                    {
+                        if (!canTransitDiagonally)
+                        {
+                            if (distance.x != 0 && distance.y != 0)
+                            {
+                                Destroy(currentIndicator);
                                 firstObject = null;
-                                secondObject = null; 
+                                secondObject = null;
                                 return;
                             }
                         }
-                        
-                        DoSwapMotion (firstObject.transform, secondObject.transform);
-                        DoSwapTile (firstObject, secondObject, ref arrayOfShapes);
-                    } else {
+
+                        DoSwapMotion(firstObject.transform, secondObject.transform);
+                        DoSwapTile(firstObject, secondObject, ref arrayOfShapes);
+                    }
+                    else
+                    {
                         firstObject = null;
                         secondObject = null;
                     }
-                    Destroy (currentIndicator);
-                       
+                    Destroy(currentIndicator);
+
                 }
             }
         }
-        
+    }
+
+    private void processMatches()
+    {
         if (HOTween.GetTweenInfos () == null) {
             var Matches = FindMatch (arrayOfShapes);
             
@@ -133,21 +151,16 @@ public class Main : MonoBehaviour
                 secondObject = null;
                 
                 DoEmptyDown (ref arrayOfShapes);
-            }  
-       
-        else if (firstObject != null && secondObject != null
-             ) {
-                
+            } else if (firstObject != null && secondObject != null) {
                 DoSwapMotion (firstObject.transform, secondObject.transform);
-                
                 DoSwapTile (firstObject, secondObject, ref arrayOfShapes);
                 firstObject = null;
                 secondObject = null;
             } 
         }
-        (GetComponent (typeof(TextMesh))as TextMesh).text = scoreTotal.ToString ();
+        (GetComponent(typeof(TextMesh)) as TextMesh).text = scoreTotal.ToString();
     }
-    
+
     private ArrayList FindMatch (GameObject[,] cells)
     {
         ArrayList stack = new ArrayList ();
