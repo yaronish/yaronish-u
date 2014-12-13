@@ -52,13 +52,13 @@
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\MatchThemAssets\HOTween\HOTween_License.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/yonischenko/work/Work/Unity/UnitySet/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>F:/www/Unity/UnitySet/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="HOTween">
- <HintPath>C:/Users/yonischenko/work/Work/Unity/UnitySet/Assets/MatchThemAssets/HOTween/HOTween.dll</HintPath>
+ <HintPath>F:/www/Unity/UnitySet/Assets/MatchThemAssets/HOTween/HOTween.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
