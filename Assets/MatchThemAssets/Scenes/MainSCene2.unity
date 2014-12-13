@@ -141,8 +141,11 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
   m_HDR: 0
   m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
 --- !u!4 &93340199
 Transform:
   m_ObjectHideFlags: 0
@@ -154,6 +157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1 &299578637
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,9 +193,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 452f7ff6006cb254a8f53fb2d67f54e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &299578639
@@ -205,6 +208,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &563817143
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,22 +240,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8fba5683cadd2408bf3acf08818bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _indicator: {fileID: 100000, guid: bba6a4e9bfd3dd14399ecd57de62f9cc, type: 2}
-  _listOfGems:
+  indicator: {fileID: 100000, guid: bba6a4e9bfd3dd14399ecd57de62f9cc, type: 2}
+  listOfGems:
   - {fileID: 100000, guid: 2ce96f6a309dd0443955acf435ab7fb6, type: 2}
-  - {fileID: 100000, guid: f3e6184b7436eca4eb7b8729ed29f3a6, type: 2}
+  - {fileID: 100000, guid: b84c38e27f9fd6a44a7a54aa2fff8dd1, type: 2}
   - {fileID: 100000, guid: 827f585e8526dc34b9672086719ed792, type: 2}
   - {fileID: 100000, guid: b13474c6c30ac9d41aeb969399397492, type: 2}
-  - {fileID: 100000, guid: b9f1bb75dd162084b9f8614f4c98ffa5, type: 2}
-  _emptyGameobject: {fileID: 100000, guid: 18b2597ccd361364f82b80eb49c12b61, type: 2}
-  _particleEffect: {fileID: 100000, guid: f098e01493dd73746819531811e99d1b, type: 2}
-  _particleEffectWhenMatch: {fileID: 100000, guid: 13d580f2bd28eb0429142dfcd28591fc,
+  - {fileID: 100000, guid: f3e6184b7436eca4eb7b8729ed29f3a6, type: 2}
+  emptyGameobject: {fileID: 100000, guid: 18b2597ccd361364f82b80eb49c12b61, type: 2}
+  particleEffect: {fileID: 100000, guid: f098e01493dd73746819531811e99d1b, type: 2}
+  particleEffectWhenMatch: {fileID: 100000, guid: c994fde8e6848a3771503f184e0c9cb4,
     type: 2}
-  _canTransitDiagonally: 1
-  _scoreIncrement: 5
+  canTransitDiagonally: 0
+  scoreIncrement: 10
   MatchSound: {fileID: 8300000, guid: 80821e898af2b274698840c6db53ed56, type: 3}
-  _gridWidth: 7
-  _gridHeight: 9
+  gridWidth: 7
+  gridHeight: 9
 --- !u!4 &563817145
 Transform:
   m_ObjectHideFlags: 0
@@ -263,6 +267,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!82 &563817146
 AudioSource:
   m_ObjectHideFlags: 0
@@ -360,9 +365,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!1001 &806203907
 Prefab:
   m_ObjectHideFlags: 0
@@ -438,9 +442,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 452f7ff6006cb254a8f53fb2d67f54e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &831316216
@@ -454,6 +457,7 @@ Transform:
   m_LocalScale: {x: .244157791, y: .24415952, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1001 &1448976808
 Prefab:
   m_ObjectHideFlags: 0
@@ -461,6 +465,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: listOfGems.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
       propertyPath: _listOfGems.Array.size
       value: 5
@@ -573,6 +581,54 @@ Prefab:
       propertyPath: _canTransitDiagonally
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: listOfGems.Array.data[0]
+      value: 
+      objectReference: {fileID: 100000, guid: 2ce96f6a309dd0443955acf435ab7fb6, type: 2}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: listOfGems.Array.data[1]
+      value: 
+      objectReference: {fileID: 100000, guid: b84c38e27f9fd6a44a7a54aa2fff8dd1, type: 2}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: listOfGems.Array.data[2]
+      value: 
+      objectReference: {fileID: 100000, guid: 827f585e8526dc34b9672086719ed792, type: 2}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: listOfGems.Array.data[3]
+      value: 
+      objectReference: {fileID: 100000, guid: b13474c6c30ac9d41aeb969399397492, type: 2}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: listOfGems.Array.data[4]
+      value: 
+      objectReference: {fileID: 100000, guid: f3e6184b7436eca4eb7b8729ed29f3a6, type: 2}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: emptyGameobject
+      value: 
+      objectReference: {fileID: 100000, guid: 18b2597ccd361364f82b80eb49c12b61, type: 2}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: particleEffect
+      value: 
+      objectReference: {fileID: 100000, guid: f098e01493dd73746819531811e99d1b, type: 2}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: particleEffectWhenMatch
+      value: 
+      objectReference: {fileID: 100000, guid: c994fde8e6848a3771503f184e0c9cb4, type: 2}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: gridWidth
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: gridHeight
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: scoreIncrement
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
+      propertyPath: indicator
+      value: 
+      objectReference: {fileID: 100000, guid: bba6a4e9bfd3dd14399ecd57de62f9cc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14910ea5b5a2fa64c9a1d4a3215fbdd0, type: 2}
   m_RootGameObject: {fileID: 563817143}
@@ -669,9 +725,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: -5
-  m_SortingOrder: 0
   m_SortingLayerID: 1535931219
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6a78386a86d163e458ad29b58c64af91, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1963481232
@@ -685,6 +740,7 @@ Transform:
   m_LocalScale: {x: 2.77406931, y: 2.7740705, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1001 &2015954515
 Prefab:
   m_ObjectHideFlags: 0
