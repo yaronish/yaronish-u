@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,11 +46,35 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Games\Game 1 - Catch eggs\Scripts\EggCollider.cs" />
+     <Compile Include="Assets\Games\Game 1 - Catch eggs\Scripts\EggScript.cs" />
+     <Compile Include="Assets\Games\Game 1 - Catch eggs\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Games\Game 1 - Catch eggs\Scripts\SpawnerScript.cs" />
+     <Compile Include="Assets\Games\Game 2 - Jump game\Scripts\EdgeTrigger.cs" />
+     <Compile Include="Assets\Games\Game 2 - Jump game\Scripts\GameControl.cs" />
+     <Compile Include="Assets\Games\Game 2 - Jump game\Scripts\GameGUI.cs" />
+     <Compile Include="Assets\Games\Game 2 - Jump game\Scripts\Playermovement.cs" />
+     <Compile Include="Assets\Games\Game 3 - Marble game\Scripts\GameoverTrigger.cs" />
+     <Compile Include="Assets\Games\Game 3 - Marble game\Scripts\MarbleCamera.cs" />
+     <Compile Include="Assets\Games\Game 3 - Marble game\Scripts\MarbleControl.cs" />
+     <Compile Include="Assets\Games\Game 3 - Marble game\Scripts\MarbleGameManager.cs" />
+     <Compile Include="Assets\Games\Game 4 - 3D breakout\Scripts\Ball.cs" />
+     <Compile Include="Assets\Games\Game 4 - 3D breakout\Scripts\Block.cs" />
+     <Compile Include="Assets\Games\Game 4 - 3D breakout\Scripts\BreakoutGame.cs" />
+     <Compile Include="Assets\Games\Game 4 - 3D breakout\Scripts\Paddle.cs" />
+     <Compile Include="Assets\Games\Game 5 - Shooting gallery\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Games\Game 5 - Shooting gallery\Scripts\ObjectSpawner.cs" />
+     <Compile Include="Assets\Games\Game 5 - Shooting gallery\Scripts\PlayerInput.cs" />
+     <Compile Include="Assets\Games\MainMenu\MainMenuScript.cs" />
      <Compile Include="Assets\MatchThemAssets\Script\Main.cs" />
-     <Compile Include="Assets\Scripts\GameLogic.cs" />
-     <Compile Include="Assets\Scripts\SquareItem.cs" />
+     <Compile Include="Assets\Squares\Assets\Scripts\GameLogic.cs" />
+     <Compile Include="Assets\Squares\Assets\Scripts\SquareItem.cs" />
+     <None Include="Assets\Standard Assets\Blob-Shadow\ShadowProjection.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\MatchThemAssets\HOTween\HOTween_License.txt" />
+     <None Include="Assets\Standard Assets\Water\Sources\FX-Water Simple.shader" />
+     <None Include="Assets\Standard Assets\Gem Rendering\diamond shader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
