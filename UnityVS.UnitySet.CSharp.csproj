@@ -88,7 +88,7 @@
     <Compile Include="Assets\Games\MainMenu\MainMenuScript.cs" />
     <Compile Include="Assets\MatchThemAssets\Script\Main.cs" />
     <Compile Include="Assets\Squares\Assets\Scripts\GameLogic.cs" />
-    <Compile Include="Assets\Squares\Assets\Scripts\SquareItem.cs" />
+    <Compile Include="Assets\Squares\Assets\Scripts\Tile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\MatchThemAssets\HOTween\HOTween.XML" />
